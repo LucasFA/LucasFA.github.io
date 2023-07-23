@@ -1,4 +1,4 @@
 baseURL = 'http://LucasFA.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'LucasFA'
 theme = 'PaperMod'
