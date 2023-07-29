@@ -32,9 +32,9 @@ languages:
                 - name: Resume
                   url: resume
                   weight: 1 
-                - name: Search
-                  url: search/
-                  weight: 10
+                # - name: Search
+                #   url: search/
+                #   weight: 10
                # - name: Archive
                 #   url: archives
                 #   weight: 5
