@@ -177,6 +177,9 @@ privacy:
         disabled: false
         privacyEnhanced: true
 
+caches:
+  images:
+    dir: :cacheDir/images
 services:
     instagram:
         disableInlineCSS: true
