@@ -4,20 +4,17 @@ date: 2023-07-23T15:58:19+01:00
 draft: true
 ---
 
-No, no blockchains here.
-
-There's a [contracts crate](https://docs.rs/contracts/latest/contracts/) in Rust, as in [Design by Contract](https://en.wikipedia.org/wiki/Design_by_contract), but I figured I'd try to write my own, but I'm going on a tangent first.
 
 One day I asked on reddit what this pattern I remembered seeing was called.
 
 ```rust
 fn transmogrify<T: Into<P>>(thing: T) -> i32 {
-    return reified_transmogrify(thing.into());
+    fn reified_transmogrify(p: P) -> i32 {
+        // your implementation here 
+    } 
+    reified_transmogrify(thing.into())
 }
 
-fn reified_transmogrify(p: P) -> i32 {
-    // your implementation here 
-} 
 ```
 
 I probably found it in [this post from Matklad](https://matklad.github.io/2021/07/09/inline-in-rust.html).
@@ -28,7 +25,7 @@ It also has a smaller cousin I just made up:
 #[inline(always)]
 fn robust_f(thing: i32) -> i32 {
     // Some checks here 
-    unsafe { reified_transmogrify(thing) }
+    unsafe { basic_f(thing) }
 }
 
 unsafe fn basic_f(p: i32) -> i32 {
@@ -36,9 +33,10 @@ unsafe fn basic_f(p: i32) -> i32 {
 } 
 ```
 
-The big cousin has a clear reason to exist: it prevent unnecessary recompilation of the full `reified_transmogrify` function - though `transmogrify` will still be recompiled.
+The big cousin has a clear reason to exist: it prevents the monomorphization cost that would usually be incurred.
 
 Why the smaller cousin though? Well, the naming and the rest of the post might have given it away.
+There's a [contracts crate](https://docs.rs/contracts/latest/contracts/) in Rust, as in [Design by Contract](https://en.wikipedia.org/wiki/Design_by_contract).
 
 Suppose you have an unsafe performance critical function, and you want to make sure it's called with valid arguments. The contracts crate essentially would turn this:
 
