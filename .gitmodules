@@ -4,6 +4,7 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+	branch = master
 [submodule "themes/hugo-theme-nightfall"]
 	path = themes/hugo-theme-nightfall
 	url = https://github.com/LordMathis/hugo-theme-nightfall
