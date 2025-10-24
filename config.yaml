@@ -17,21 +17,6 @@ minify:
     # minifyOutput: true
 
 languages:
-    es:
-        languageName: "Español"
-        weight: 1
-        taxonomies:
-          category: categories
-          tag: tags
-          series: series
-        menu:
-            main:
-                - name: Sobre mí
-                  url: about
-                  weight: 1
-                - name: Blog
-                  url: blog
-                  weight: 1
     en:
         languageName: "English"
         weight: 1
@@ -66,10 +51,16 @@ outputs:
         # - JSON
 
 params:
+    math: true
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "This is my blog site."
     author: 
     # author: ["Me", "You"] # multiple authors
+    homeInfoParams:
+      Title: "Hi There :wave:"
+      Content: "Welcome to my blog"
+    socialIcons:
+
 
     defaultTheme: auto
     # disableThemeToggle: true
@@ -113,6 +104,8 @@ params:
     socialIcons:
         - name: github
           url: "https://github.com/LucasFA"
+        - name: linkedin
+          url: "https://linkedin.com/in/lucas-fa"
         - name: Rss
           url: "index.xml"
 
