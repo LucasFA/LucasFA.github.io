@@ -74,7 +74,7 @@ params:
     defaultTheme: auto
     # disableThemeToggle: true
     ShowShareButtons: false
-    ShareButtons: ["twitter", "reddit", "linkedin", "whatsapp", "telegram"]
+    ShareButtons: [ "reddit", "linkedin", "whatsapp", "telegram"]
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: false
@@ -185,5 +185,5 @@ privacy:
 services:
     instagram:
         disableInlineCSS: true
-    twitter:
+    x:
         disableInlineCSS: true
