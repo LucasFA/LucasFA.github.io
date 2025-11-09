@@ -10,7 +10,7 @@ Suppose you have a function,
 
 $$ \begin{align}
    f: A &\to B \\
-   f: a &\mapsto f(a)
+   f: a &\longmapsto f(a)
 \end{align}
 $$
 
