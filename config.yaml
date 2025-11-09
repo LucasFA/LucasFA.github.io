@@ -1,7 +1,7 @@
 baseURL: 'http://LucasFA.github.io/'
 languageCode: 'en-us'
 title: 'LucasFA'
-theme: PaperMod
+theme: hugo-coder
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
