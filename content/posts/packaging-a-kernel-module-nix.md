@@ -1,10 +1,10 @@
 ---
-title: "Packaging a Linux kernel module in Nix, outside Nixpkgs"
+title: "Packaging a Linux kernel module in Nix"
 date: 2025-11-16
 draft: false
 ---
 
-I use a [Slimbook](slimbook.com) Hero laptop, based on
+I use a [Slimbook](https://slimbook.com) Hero laptop, based on
 [Intel QC71](https://wiki.archlinux.org/title/Intel_QC71).
 There is a
 [kernel module](https://github.com/pobrn/qc71_laptop)
@@ -65,9 +65,9 @@ Point being, I had hardcoded the make flags.
 
 ## Rolling it into the NUR
 
-The [Nix User Repository](github.com/nix-community/NUR)
+The [Nix User Repository](https://github.com/nix-community/NUR)
 is somewhat akin to Arch's AUR. Each user has
-[their own repository](github.com/LucasFA/nur-packages),
+[their own repository](https://github.com/LucasFA/nur-packages),
 and you can include packages, modules and overlays.
 
 The basic structure goes something like this:
@@ -142,4 +142,4 @@ boot.kernelModules = [ "qc71_laptop" ];
 
 The nix snippets in this article are slightly modified for brevity. If you
 are reading this to get your config working, I recommend you head over
-to [my repo](https://github.com/LucasFA/.nixos/releases/tag/blog%2F2025-11-packaging-kernel-module).
+to [my repo](https://github.com/LucasFA/.nixos/tree/blog/2025-11-packaging-kernel-module).
