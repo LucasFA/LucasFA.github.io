@@ -1,7 +1,7 @@
 baseURL: 'http://LucasFA.github.io/'
 languageCode: 'en-us'
 title: 'LucasFA'
-theme: hugo-coder
+theme: PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -60,7 +60,7 @@ params:
     defaultTheme: auto
     # disableThemeToggle: true
     ShowShareButtons: false
-    ShareButtons: [ "reddit", "linkedin", "whatsapp", "telegram"]
+    ShareButtons: [ "reddit", "whatsapp", "telegram",]
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: false
@@ -161,20 +161,20 @@ markup:
 
 privacy:
     vimeo:
-        disabled: false
+        disabled: true
         simple: true
 
     x:
-        disabled: false
+        disabled: true
         enableDNT: true
         simple: true
 
     instagram:
-        disabled: false
+        disabled: true
         simple: true
 
     youtube:
-        disabled: false
+        disabled: true
         privacyEnhanced: true
 
 services:
