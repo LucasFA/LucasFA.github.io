@@ -64,8 +64,8 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --gc
-            --cacheDir "${{ runner.temp }}/hugo_cache"
+            --gc \
+            --cacheDir "${{ runner.temp }}/hugo_cache" \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Cache save
